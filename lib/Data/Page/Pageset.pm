@@ -13,8 +13,8 @@ __PACKAGE__->mk_accessors( qw(
 	previous_pageset
 	next_pageset
  ) );
-
-our $VERSION = sprintf "%d.%02d", q$Revision: 1.1.1.1 $ =~ /: (\d+)\.(\d+)/;
+# add this for make more version to be 1.02
+our $VERSION = sprintf "%d.%02d", q$Revision: 1.2 $ =~ /: (\d+)\.(\d+)/;
 
 sub new {
 	my $class = shift;

@@ -7,7 +7,7 @@ use overload
 
 __PACKAGE__->mk_accessors( qw( first last pages is_current ) );
 
-our $VERSION = sprintf "%d.%02d", q$Revision: 1.1.1.1 $ =~ /: (\d+)\.(\d+)/;
+our $VERSION = sprintf "%d.%02d", q$Revision: 1.2 $ =~ /: (\d+)\.(\d+)/;
 
 sub new {
 	my $class = shift;
@@ -26,7 +26,7 @@ sub middle {
 	my $self = shift;
 	my $pages = $self->pages;
 	$pages++ if $pages % 2;
-	return $pages / 2;
+	return $self->first + $pages / 2;
 }
 
 sub as_string {
